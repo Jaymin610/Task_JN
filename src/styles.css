@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Philosopher&display=swap");
+* {
+  box-sizing: border-box;
+  color: #545e6f;
+  letter-spacing: 0.2px;
+}
+body {
+  font-family: "Philosopher", sans-serif;
+  background-color: #f1f2f5;
+  margin: 0;
+}
+
+.header {
+  background-color: rgb(0, 128, 255);
+  color: #f1f2f5;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+}
+.tasks {
+  background-color: #fff;
+  margin: auto;
+  margin-top: 30px;
+  width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 3px 0 rgba(84, 94, 111, 0.2);
+  padding: 20px 0;
+}
+.task-header {
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding: 0px 20px;
+}
+.task-header div {
+  display: flex;
+  align-items: center;
+}
+.task-form {
+  padding: 0 20px;
+}
+.task-form input {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #dcdfe4;
+  padding: 12px 14px;
+  outline: 0;
+  font-size: 14px;
+  color: #545e6f;
+}
+.task-form input:focus {
+  border-color: rgb(255, 128, 0);
+  box-shadow: 0 0 0 2px rgb(252, 179, 105);
+}
+
+.task-form input::placeholder {
+  color: #777d8c;
+}
+
+.task-list {
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+.task-list li {
+  border-top: 1px solid #dcdfe4;
+  padding: 8px 20px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.task-list li:first-child {
+  border-top: 1px solid transparent;
+}
+
+.task-list li input[type="checkbox"] {
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #d2d5da;
+  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  outline: 0;
+  margin-right: 10px;
+  order: 1;
+  z-index: 2;
+}
+
+.task-list li input[type="checkbox"]:checked {
+  background: #24b373 url("../task_img/done.svg") no-repeat center;
+  background-size: contain;
+  border-color: #24b373;
+}
+.task-list li input[type="checkbox"]:focus {
+  border-color: #24b373;
+  box-shadow: 0 0 0 3px #cff1e2;
+}
+
+.task-list li span {
+  order: 2;
+}
+
+.task-list li button {
+  background: url("../task_img/delete.svg");
+  order: 3;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  z-index: 2;
+}
+
+.task-complete span {
+  text-decoration: line-through;
+  color: #939aab;
+}
+.clear-task {
+  outline: 0;
+  border: 0;
+  padding: 0 10px;
+  margin-left: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 30px;
+  box-shadow: 0 3px 0 rgba(84, 94, 111, 0.2);
+  display: none;
+}
+.clear-task:hover {
+  color: #ff5858;
+}
+.clear-task:focus {
+  color: #ff5858;
+  border-color: #ff5858;
+}
+.task-list li input[type="text"] {
+  width: 100%;
+  line-height: 26px;
+  padding: 8px 46px;
+  order: 2;
+  outline: 0;
+  border: 0;
+  position: absolute;
+  left: 0px;
+  font-family: "Philosopher", sans-serif;
+  color: #545e6f;
+  letter-spacing: 0.2px;
+  font-size: 16px;
+  border-bottom: 1px solid #d2d5da;
+  box-shadow: inset 0 1px 3px #d2d5da;
+  z-index: 1;
+}
+.task-list li:nth-child(odd) input[type="text"] {
+  top: 0.5px;
+}
